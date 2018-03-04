@@ -1,0 +1,29 @@
+head
+    title= "WeatherMap"
+Body
+    h1 WeatherMap 
+    div
+        h4 Do you fancy searching for the forecast weather of a city?
+        form(action="/city")
+            input(type="text", name="cityname" placeholder="Enter a city")
+            &nbsp;
+            &nbsp;
+            input(type="submit" value="Show Forecast")
+    div
+        if forecastData 
+            h3 Forecast data for #{forecastData.city}, #{forecastData.country}
+            hr
+            if forecastData.list.length > 0
+                each item in forecastData.list
+                    span #{item.dt_txt}
+                    br
+                    p Weather : #{item.weather[0].main}, #{item.weather[0].description}
+                    p Wind Speed : #{item.wind.speed}
+                    p Temperature : #{item.main.temp}
+                    p Min. Temp : #{item.main.temp_min}
+                    p Max. Temp : #{item.main.temp_max}
+                    p Humidity : #{item.main.humidity}
+                    br
+        else
+            p #{text}
+            
