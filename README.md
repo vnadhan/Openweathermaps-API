@@ -1,6 +1,3 @@
 Technologies:
 
-HTML 
-Node
-JavaScript
-Jade
+HTML, Node, JavaScript, Jade template engine
