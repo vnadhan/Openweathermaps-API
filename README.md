@@ -1,1 +1,9 @@
-CTK interview
+Technologies:
+
+HTML 
+
+Node
+
+JavaScript
+
+Jade
